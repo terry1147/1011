@@ -9,7 +9,7 @@ def index():
     homepage += "<a href=/mis>MIS</a><br>"
     homepage += "<a href=/today>顯示日期時間</a><br>"
     homepage += "<a href=/welcome?nick=terry>傳送使用者名稱</a><br>"
-    homepage += "<a href=/myself>興趣何倫碼</a><br>"
+    homepage += "<a href=/code>興趣何倫碼</a><br>"
     homepage += "<a href=/work>工作</a><br>"
     homepage += "<a href=/my>自傳履歷</a><br>"
     homepage += "<a href=/future>未來規劃</a><br>"
