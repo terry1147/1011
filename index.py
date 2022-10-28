@@ -9,8 +9,11 @@ def index():
 	homepage += "<a href=/mis>MIS</a><br>"
 	homepage += "<a href=/today>顯示日期時間</a><br>"
 	homepage += "<a href=/welcome?nick=terry>傳送使用者名稱</a><br>"
-	homepage += "<a href=/account>網頁表單輸入實例</a><br><br>"
-	homepage += "<a href=/about>韻琪簡介網頁</a><br>"
+	
+	homepage += "<a href=/myself>興趣何倫碼</a><br>"
+    homepage += "<a href=/work>工作</a><br>"
+    homepage += "<a href=/my>自傳履歷</a><br>"
+    homepage += "<a href=/future>未來規劃</a><br>"
 	return homepage
 @app.route("/mis")
 def course():
@@ -26,19 +29,24 @@ def welcome():
     user = request.values.get("nick")
     return render_template("welcome.html", name=user)
 
-@app.route("/about")
+@app.route("/myself")
 def about():
-    return render_template("about.html")
+    return render_template("myself.html")
 
-@app.route("/account", methods=["GET", "POST"])
-def account():
-    if request.method == "POST":
-        user = request.form["user"]
-        pwd = request.form["pwd"]
-        result = "您輸入的帳號是：" + user + "; 密碼為：" + pwd 
-        return result
-    else:
-        return render_template("account.html")
+@app.route("/work")
+def about():
+    return render_template("work.html")
+
+@app.route("/my")
+def about():
+    return render_template("my.html")
+
+@app.route("/future")
+def about():
+    return render_template("future.html")
+
+
+
 
 
 #if __name__ == "__main__":
