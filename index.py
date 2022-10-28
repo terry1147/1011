@@ -13,7 +13,7 @@ def index():
     homepage += "<a href=/work>工作</a><br>"
     homepage += "<a href=/my>自傳履歷</a><br>"
     homepage += "<a href=/future>未來規劃</a><br>"
-    return 
+    return homepage
 
 @app.route("/mis")
 def course():
